@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor-primaria: #164863;
+    --cor-secundaria: #DDF2FD;
+    --cor-tercearia: #9BBEC8;
+    --cor-hover: #427D9D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;  /* definir que o conteudo filho do body se limite a o pai body, e não atravesse, isso aconteceria com content-border*/
+    /* height: 100vh; */
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+    
+    
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+   
+}
+
+.cabecalho__menu__link{
+font-size: 24px;
+font-family: "Montserrat", sans-serif;
+color: var(--cor-tercearia);
+font-weight: 600;
+text-decoration: none;
+
+}
+
+.cabecalho__menu__link:hover {
+    background-color: var(--cor-hover);
+    text-decoration: underline;
+    border-radius: 8px;
+}
+
+.apresentacao {
+    display: flex;  /* definir um container flexivel, para se adaptar a por exemplo, a tela do dispostivo atual */
+    align-items: center; /* alinha os items no centro */
+    justify-content: space-between; /* espaço entre os items nesse caso dar um espaço entre eles  */
+    padding: 5% 15%;    
+    gap: 86px;
+}
+
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: "Krona One", sans-serif; 
+}
+
+
+.destaque-titulo {
+    color: var(--cor-tercearia);
+    
+}
+
+
+.apresentacao__conteudo__texto {
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+}
+.apresentacao__links {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    gap: 32px;
+}
+
+.apresentacao__links__subtitulo {
+    font-size: 24px;
+    font-family:"Krona One", sans-serif; 
+    font-weight: 400;
+    
+}
+.apresentacao__links__navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-tercearia);
+    border-radius: 8px; /* arredondamento das bordas */
+    width: 50%;
+    text-align: center;
+    font-size: 24px;
+    font-weight:600;
+    padding: 21.5px 0; /* primeiro valor definir o padding verticalmente e o segundo horizotalmente, nesse caso nenhum */
+    text-decoration: none; /* tira qualquer decoração padrão do texto, nesse caso remover o sublinhado do link*/
+    color: var(--cor-secundaria);
+    font-family: "Montserrat", sans-serif; 
+}
+
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover);
+}
+
+
+.apresentacao_imagem {
+    width: 50%;
+}
+
+
+.rodape {
+    background-color: var(--cor-tercearia);
+    color: var(--cor-primaria);
+    padding: 23.64px;
+    text-align: center;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 400;
+    
+}
+
+@media (max-width: 1200px) {
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .cabecalho{
+        padding: 10%
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    .apresentacao__conteudo {
+        width: auto;
+    }
+}
+
+
+/* align-items (alinhamento dos items verticalmente)
+justify-conten (alinhamento dos items horizontalmente)
+            Diferença entre gap e margin::
+gap é o espaçamento entre os elementos (10px = 10px), usano principalmente em containers 
+margin é o espaçamento em volta do elemento (10px = 20px, pq é 10px em volta para cada elemento
+
+*/
